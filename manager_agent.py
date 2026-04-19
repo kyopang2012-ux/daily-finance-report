@@ -74,7 +74,7 @@ def generate_report(news_data):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-pro', # 使用 Pro 模型以獲得最高品質的分析與高品質 HTML 排版
+            model='gemini-2.5-flash', # 使用 Pro 模型以獲得最高品質的分析與高品質 HTML 排版
             contents=prompt,
         )
         html_content = response.text
