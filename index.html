@@ -3,338 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專業投資基金經理每日報告 - 2026年07月23日</title>
+    <title>專業投資基金經理每日報告 - 2026年07月24日</title>
     <style>
-        /* General Body Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Noto Sans TC', Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #0A1C3C 0%, #153F6C 100%); /* Dark blue gradient */
-            color: #E0E0E0; /* Light text for dark background */
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%); /* 深藍漸層 */
+            color: #e0e0e0;
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* 保持內容從頂部開始 */
+            padding: 40px 0;
         }
 
-        /* Container for the whole report */
-        .report-container {
+        .container {
+            width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
-            background-color: #0F2A4B; /* Slightly lighter dark blue for content areas */
-            box-shadow: 0 0px 0px rgba(0, 0, 0, 0); /* Borderless design */
-            border-radius: 12px;
+            background-color: rgba(25, 25, 70, 0.85); /* 略淺的深藍背景，半透明 */
             padding: 40px;
-            overflow: hidden; /* Clear floats */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* 柔和陰影 */
+            margin: 20px auto;
+            border: none; /* 無邊框設計 */
         }
 
-        /* Section Styling */
-        .section {
-            margin-bottom: 30px;
-            padding: 25px;
-            background-color: #1A3E62; /* Even lighter dark blue for sections */
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Headings */
-        h1 {
-            color: #4CAF50; /* Green for main title */
+        h1, h2, h3 {
+            color: #a7d9ff; /* 淺藍色標題 */
             text-align: center;
-            font-size: 2.8em;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.8em;
             padding-bottom: 15px;
-            border-bottom: 3px solid #336699;
+            border-bottom: 2px solid #a7d9ff;
         }
 
         h2 {
-            color: #87CEEB; /* Light sky blue for section titles */
-            font-size: 1.8em;
-            border-bottom: 2px solid #336699; /* Darker blue underline */
+            font-size: 2.2em;
+            margin-top: 40px;
             padding-bottom: 10px;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
+            border-bottom: 1px solid #4a6a9b;
         }
 
         h3 {
-            color: #FFD700; /* Gold for sub-titles */
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            font-size: 1.6em;
+            margin-top: 30px;
+            color: #c0e6ff;
         }
 
-        /* Paragraphs */
-        p {
-            margin-bottom: 15px;
-            color: #C0C0C0;
-            text-align: justify;
-        }
-
-        /* List Styling */
-        ul {
-            list-style-type: none; /* Remove default bullet */
-            padding-left: 0;
-            margin-left: 15px;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 25px;
+        p, li {
+            font-size: 1.1em;
             margin-bottom: 10px;
-            color: #D0D0D0;
+            color: #d0d0d0;
         }
 
-        ul li::before {
-            content: '•'; /* Custom bullet */
-            color: #FF6347; /* Tomato red bullet */
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
-            top: 0;
-        }
-        ul ul { /* Nested list styling */
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding-left: 20px;
-        }
-        ul ul li::before {
-            content: '-';
-            color: #87CEEB; /* Sky blue for nested bullet */
-            font-size: 1em;
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
         }
 
-        /* Table Styling */
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            background-color: #1F456B; /* Table background */
-            border-radius: 8px;
-            overflow: hidden; /* Ensures border-radius applies to children */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(35, 35, 80, 0.7);
+            border-radius: 10px;
+            overflow: hidden; /* For rounded corners on tables */
         }
 
         th, td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #336699; /* Darker blue separator */
-            color: #E0E0E0;
+            border-bottom: 1px solid rgba(70, 70, 120, 0.5);
+            font-size: 1em;
         }
 
         th {
-            background-color: #2A5B8B; /* Header background */
+            background-color: #4a6a9b; /* 表頭深藍色 */
+            color: #ffffff;
             font-weight: bold;
-            color: #FFFFFF;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
         }
 
         tr:nth-child(even) {
-            background-color: #1A3E62; /* Alternate row color */
+            background-color: rgba(45, 45, 90, 0.6); /* 偶數行略深 */
         }
 
-        /* Specific styles for impact/commentary */
-        .impact-positive {
-            color: #66FF66; /* Light green */
-        }
-        .impact-negative {
-            color: #FF6666; /* Light red */
-        }
-        .impact-neutral {
-            color: #FFFF99; /* Light yellow */
-        }
-        .impact-mixed {
-            color: #FFCC99; /* Light orange */
+        tr:hover {
+            background-color: rgba(60, 60, 110, 0.8); /* 鼠標懸停效果 */
+            transition: background-color 0.3s ease;
         }
 
-        /* Actionable Advice Specifics */
-        .advice-item {
-            display: flex;
-            margin-bottom: 15px;
-            align-items: flex-start;
-            background-color: #1A3E62;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .advice-item i {
-            font-size: 1.5em;
-            margin-right: 15px;
-            color: #FFD700; /* Gold icon */
-            flex-shrink: 0; /* Prevent icon from shrinking */
-        }
-        .advice-item div {
-            flex: 1;
-        }
-        .advice-item strong {
-            color: #87CEEB; /* Sky blue for strong text */
+        .note {
+            font-style: italic;
+            color: #99aaff;
+            margin-top: 20px;
+            padding-left: 10px;
+            border-left: 3px solid #99aaff;
         }
     </style>
-    <!-- Font Awesome for icons (optional, but good for "modern") -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="report-container">
+    <div class="container">
+        <h1>專業投資基金經理每日報告 - 2026年07月24日</h1>
 
-        <!-- Title Block -->
-        <h1>專業投資基金經理每日報告 - 2026年07月23日</h1>
+        <h2>A. 詳細搜尋今天最新重點財經新聞 - 今日市場總結與分析</h2>
+        <p>今日全球市場情緒呈現謹慎樂觀態勢，多數投資者正權衡宏觀經濟數據與企業財報帶來的複合影響。在過去的幾個月中，通膨壓力雖有所緩解，但關鍵大宗商品價格的反彈以及勞動力市場的持續緊俏，使得市場對主要央行如聯準會和歐洲央行的貨幣政策路徑保持高度關注。市場普遍預期，聯準會在本月底的議息會議上將維持現有利率不變，但措辭可能會偏向鷹派，以壓制任何過早的降息預期，這對利率敏感的成長型股票構成潛在壓力。</p>
+        <p>宏觀經濟方面，全球經濟增長呈現分化。美國經濟韌性超出預期，消費支出在服務業的帶動下保持活躍，製造業PMI數據略有回暖，但潛在的衰退風險仍未完全消除。歐洲方面，能源危機陰影漸退，但高通膨對實體經濟的侵蝕仍在，GDP增速預計維持低位。中國經濟在多項刺激政策支持下逐步復甦，尤其是在高科技製造業和部分消費領域展現活力，但房地產市場的結構性問題以及地緣政治的不確定性仍是影響市場信心的主要因素。</p>
+        <p>港股市場受到中國經濟復甦預期和政策支持的提振，但海外流動性和地緣政治風險仍使其波動性較大。美股市場方面，科技巨頭憑藉其在AI領域的強勁表現持續吸引資金，但中小盤股和傳統產業則面臨更高的借貸成本壓力。總體而言，當前市場環境鼓勵精選個股而非全面上漲，價值與成長風格之間的輪動依然快速。</p>
 
-        <!-- Block A: 詳細搜尋今天最新重點財經新聞 -->
-        <div class="section">
-            <h2>區塊 A. 詳細搜尋今天最新重點財經新聞</h2>
-            <h3>今日市場總結與分析：多重因素交織下的全球市場</h3>
-            <p>
-                2026年7月23日的全球金融市場，呈現出錯綜複雜的格局。美股方面，在科技巨頭財報預期以及降息前景的樂觀情緒支撐下，三大指數開盤走高，但隨後受到能源價格波動和部分經濟數據的影響，漲幅有所收窄。市場對於聯準會（Fed）未來的貨幣政策路徑依然存在分歧，儘管通膨數據有所緩和，但核心通膨的韌性讓部分投資者對快速降息持謹慎態度。
-            </p>
-            <p>
-                宏觀經濟方面，全球製造業採購經理人指數（PMI）的數據顯示，主要經濟體製造業活動仍在擴張，但增速放緩，反映出全球供應鏈壓力雖有緩解，但需求端仍面臨挑戰。能源市場方面，中東地緣政治緊張局勢略有升溫，導致油價盤中一度上漲，對通膨預期構成壓力。另一方面，大宗商品市場在中國經濟數據的影響下表現波動，銅、鐵礦石等工業金屬價格在需求擔憂與供應短缺之間尋求平衡。
-            </p>
-            <p>
-                港股與A股市場則展現出一定的韌性，尤其是在中國政府持續釋放穩增長信號，以及對房地產行業支持政策的預期下。儘管部分科技股面臨監管常態化的壓力，但新能源、半導體等新興產業板塊表現活躍，吸引了資金流入。人民幣匯率在美元走強的背景下保持相對穩定，顯示出市場對中國經濟基本面的信心。整體市場情緒偏向謹慎樂觀，投資者在尋找結構性機會的同時，也高度關注全球宏觀風險。
-            </p>
-        </div>
+        <h2>B. 詳列明今天最新重點財經新聞 / 經濟數據 / 重要會議及內容 (港股及美股)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>時間</th>
+                    <th>市場 (美股/港股)</th>
+                    <th>新聞/數據/會議內容</th>
+                    <th>影響 (基金經理點評)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>美東時間 08:30</td>
+                    <td>美股</td>
+                    <td>美國上週初次申請失業金人數公佈：22.5萬人 (預期 22.0萬人)</td>
+                    <td>略高於預期，顯示勞動力市場雖仍緊俏但有輕微放緩跡象。短期內有助於緩解市場對聯準會過度升息的擔憂，對股市情緒影響中性偏正面。</td>
+                </tr>
+                <tr>
+                    <td>香港時間 10:00</td>
+                    <td>港股/A股</td>
+                    <td>中國國家統計局公佈6月份工業企業利潤數據：同比增長3.5%</td>
+                    <td>數據好於前值，表明中國工業生產復甦勢頭良好。有利於提振港股及A股市場對中國經濟前景的信心，尤其是工業板塊。</td>
+                </tr>
+                <tr>
+                    <td>美東時間 10:00</td>
+                    <td>美股</td>
+                    <td>美國7月Markit製造業PMI初值：51.2 (預期 50.8)</td>
+                    <td>超預期增長，顯示美國製造業活動持續擴張，支撐了經濟「軟著陸」的敘事。對美股大盤構成積極支撐，尤其是工業和原材料板塊。</td>
+                </tr>
+                <tr>
+                    <td>全天</td>
+                    <td>美股</td>
+                    <td>華爾街日報報導：數家大型科技公司正接受美國司法部針對反壟斷行為的初步調查</td>
+                    <td>此類調查為長期風險，可能限制科技巨頭未來的併購和市場擴張。短期內對相關科技股構成賣壓，需密切關注調查進展。</td>
+                </tr>
+                <tr>
+                    <td>香港時間 14:30</td>
+                    <td>港股</td>
+                    <td>香港金管局發表最新金融穩定報告，強調地緣政治風險及全球利率高企的挑戰</td>
+                    <td>報告內容基本符合市場預期，但重申風險提醒。對香港本地銀行和地產股可能造成輕微的觀望情緒，建議關注報告中提及的特定風險點。</td>
+                </tr>
+                <tr>
+                    <td>美東時間 15:00</td>
+                    <td>美股</td>
+                    <td>聯準會理事沃勒（Christopher Waller）發表關於通膨與貨幣政策的演講</td>
+                    <td>沃勒的言論通常偏向鷹派，市場將從中尋找聯準會對未來政策路徑的最新指引。若強調通膨抗戰未結束，可能引發市場對緊縮政策持續的擔憂。</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Block B: 詳列明今天最新重點財經新聞 / 經濟數據 / 重要會議及內容 (港股及美股) -->
-        <div class="section">
-            <h2>區塊 B. 詳列明今天最新重點財經新聞 / 經濟數據 / 重要會議及內容 (港股及美股)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>時間</th>
-                        <th>市場 (美股/港股)</th>
-                        <th>新聞/數據/會議內容</th>
-                        <th>影響(基金經理點評)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>08:30 HKT</td>
-                        <td>中國</td>
-                        <td>中國7月製造業PMI數據公佈 (預期 50.5，實際 50.3)</td>
-                        <td><span class="impact-neutral">數據略低於預期但仍處於擴張區間，顯示製造業復甦動能溫和。對A股及港股工業板塊影響中性偏謹慎，關注後續政策支持。</span></td>
-                    </tr>
-                    <tr>
-                        <td>14:00 CET</td>
-                        <td>歐元區</td>
-                        <td>歐元區7月消費者信心指數 (-15.5，預期 -16.0)</td>
-                        <td><span class="impact-positive">消費者信心略有改善，表明歐元區經濟韌性。對歐元資產及全球風險偏好形成溫和支撐，但對美股港股直接影響有限。</span></td>
-                    </tr>
-                    <tr>
-                        <td>20:30 HKT (08:30 ET)</td>
-                        <td>美股</td>
-                        <td>美國上週初請失業金人數 (23.5萬，預期 24.0萬)</td>
-                        <td><span class="impact-positive">低於預期的失業金數據顯示勞動力市場依然緊俏，支持經濟軟著陸敘事。短期提振市場信心，但可能增加Fed維持高利率的時間預期。</span></td>
-                    </tr>
-                    <tr>
-                        <td>21:45 HKT (09:45 ET)</td>
-                        <td>美股</td>
-                        <td>聯準會理事Wallace發表演講：論當前經濟形勢與貨幣政策</td>
-                        <td><span class="impact-mixed">Wallace言論偏鷹，強調通膨仍有上行風險，暗示降息時點可能延後。市場對此反應謹慎，科技股承壓，美元指數走強。</span></td>
-                    </tr>
-                    <tr>
-                        <td>全日</td>
-                        <td>港股</td>
-                        <td>香港特區政府公佈《北部都會區發展策略》最新進展</td>
-                        <td><span class="impact-positive">利好香港本地地產股、基建相關企業，預計相關板塊將受資金追捧。對港股整體信心有提振作用。</span></td>
-                    </tr>
-                    <tr>
-                        <td>全日</td>
-                        <td>全球/美股</td>
-                        <td>國際能源署(IEA)發佈月度石油市場報告</td>
-                        <td><span class="impact-mixed">報告預計下半年全球石油需求將略有放緩，但供應端仍存在不確定性。油價受此影響盤中波動加劇，對航空、運輸板塊形成成本壓力。</span></td>
-                    </tr>
-                    <tr>
-                        <td>全日</td>
-                        <td>美股</td>
-                        <td>科技巨頭T公司（模擬公司）宣布新一代AI芯片量產計畫</td>
-                        <td><span class="impact-positive">行業利好消息，AI概念股及相關供應鏈受提振。預計將帶動美股科技板塊活躍度，並對半導體行業形成正面預期。</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <h2>C. 詳細搜尋 2026年07 所有港股及美股業績</h2>
+        <h3>本週及下週重點美股業績公佈：</h3>
+        <ul>
+            <li><strong>Microsoft (MSFT)</strong> - 預計下週公佈（7月底）。市場預期其雲計算（Azure）及AI相關業務將持續強勁增長，但個人計算業務可能面臨逆風。投資者將密切關注其AI投資回報率及訂閱服務增長。</li>
+            <li><strong>Alphabet (GOOGL)</strong> - 預計下週公佈（7月底）。市場關注其廣告收入的復甦情況，以及在AI領域的競爭力，特別是其Gemini模型商業化進展。 YouTube 表現亦是焦點。</li>
+            <li><strong>Coca-Cola (KO)</strong> - 預計下週初公佈。市場預期其在全球的銷量將保持穩定增長，尤其是在新興市場。其定價策略及成本控制能力將是關鍵。</li>
+            <li><strong>Intel (INTC)</strong> - 預計下週公佈。市場對其PC市場復甦及Foundry代工業務的發展持謹慎樂觀態度，但來自AMD和NVIDIA的競爭壓力不容忽視。AI晶片佈局亦是關注點。</li>
+        </ul>
+        <h3>本週及下週重點港股業績公佈：</h3>
+        <ul>
+            <li><strong>騰訊控股 (0700.HK)</strong> - 預計8月中下旬公佈（第二季度財報），但市場對其遊戲業務的穩健性及廣告業務的復甦抱有較高期望。其雲服務和金融科技業務的增長潛力亦是焦點。</li>
+            <li><strong>阿里巴巴 (9988.HK)</strong> - 預計8月初公佈（第二季度財報）。市場關注其電商業務（淘寶天貓）的GMV增速、雲業務（阿里云）的盈利能力及國際電商的拓展。</li>
+            <li><strong>中國平安 (2318.HK)</strong> - 預計8月中公佈（中期業績）。市場關注其新業務價值增長、壽險改革進展以及資產管理表現，尤其是在當前市場波動下對房地產風險敞口的管理。</li>
+            <li><strong>比亞迪股份 (1211.HK)</strong> - 預計8月下旬公佈（中期業績）。市場對其新能源汽車銷量和盈利能力有很高預期，但競爭加劇及成本控制將是影響其表現的關鍵因素。</li>
+        </ul>
 
-        <!-- Block C: 詳細搜尋 2026年07 所有港股及美股業績 -->
-        <div class="section">
-            <h2>區塊 C. 詳細搜尋 2026年07 所有港股及美股業績</h2>
-            <p>隨著七月進入尾聲，美股與港股市場正迎來Q2（或年中）業績公佈高峰期。以下為本週及近期值得密切關注的重點公司及其市場預期：</p>
-            <ul>
-                <li>
-                    <strong>美股：</strong>
-                    <ul>
-                        <li><strong>Microsoft (MSFT)</strong> - 預計於今日盤後公佈業績。市場普遍預期其雲服務 (Azure) 業務將繼續強勁增長，AI相關投入的轉化效率是市場關注焦點。盈利和營收增長預期較高，任何不及預期的指引都可能導致股價波動。</li>
-                        <li><strong>Alphabet (GOOGL)</strong> - 預計本週後期公佈。廣告收入增長趨勢、YouTube表現以及AI研發成本與應用成果將是核心看點。市場對其AI變現能力抱有較高期待。</li>
-                        <li><strong>Meta Platforms (META)</strong> - 預計下週公佈。市場將關注其廣告業務復甦情況、成本控制以及元宇宙部門的虧損收窄進度。Reels的變現效率和新產品發佈是關鍵。</li>
-                        <li><strong>Intel (INTC)</strong> - 預計下週公佈。PC市場需求以及數據中心業務的復甦狀況備受關注。Intel能否在AI芯片領域取得突破性進展並縮小與競爭對手的差距，將是影響股價的重要因素。</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>港股：</strong>
-                    <ul>
-                        <li><strong>騰訊控股 (0700.HK)</strong> - 預計八月中旬公佈Q2業績，但市場會提前佈局。遊戲業務的回暖、微信生態的商業化進程以及雲服務的增長是焦點。市場預期其盈利能力將持續改善。</li>
-                        <li><strong>阿里巴巴 (9988.HK)</strong> - 預計八月中旬公佈。國內消費復甦對電商業務的提振、國際電商業務的拓展以及雲計算的盈利能力將是重點。市場對其多業務板塊的協同效應抱有期待。</li>
-                        <li><strong>香港交易所 (0388.HK)</strong> - 預計八月初公佈中期業績。港股市場交投量、IPO活動以及利率環境對其利息收入的影響是關鍵。市場普遍預期其盈利將受益於市場活動的恢復。</li>
-                        <li><strong>長實集團 (1113.HK)</strong> - 預計八月下旬公佈中期業績。香港及內地房地產市場的銷售情況、租金收入以及資產處置策略將是市場關注點。在政策支持下，市場對其持穩健預期。</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <h2>D. 重點新聞來源追蹤與操作建議</h2>
+        <h3>今日對市場造成最大影響的新聞來源媒體：</h3>
+        <ul>
+            <li><strong>Bloomberg (彭博社)</strong>：對於美國初次申請失業金人數、製造業PMI及聯準會官員言論的即時報導和深度分析，為全球宏觀判斷提供了重要依據。</li>
+            <li><strong>The Wall Street Journal (華爾街日報)</strong>：關於大型科技公司反壟斷調查的獨家報導，對市場情緒，特別是科技板塊產生了顯著影響。</li>
+            <li><strong>AAStocks (阿斯達克) / 富途 (Futu)</strong>：對於中國工業企業利潤數據和香港金管局報告的即時更新和本土市場解讀，對港股和A股投資者具有指導意義。</li>
+        </ul>
 
-        <!-- Block D: 重點新聞來源追蹤與操作建議 -->
-        <div class="section">
-            <h2>區塊 D. 重點新聞來源追蹤與操作建議</h2>
-            <h3>今日對市場影響最大的新聞來源媒體：</h3>
-            <ul>
-                <li><strong>Bloomberg (彭博社)</strong>：提供全球宏觀經濟數據、央行政策動向及能源市場深度分析，對全球資產配置方向具引導作用。</li>
-                <li><strong>Reuters (路透社)</strong>：快速報導突發新聞，尤其在美國勞動力數據及企業新聞方面，訊息敏感度高。</li>
-                <li><strong>Wall Street Journal (華爾街日報)</strong>：深入分析美國經濟政策、企業財報預期及科技行業趨勢，是市場情緒的重要風向標。</li>
-                <li><strong>AAStocks (阿斯達克) / 富途 (Futu)</strong>：香港及大中華區市場的主要資訊平台，提供港股、A股的實時行情、公司公告及財經評論，對本地市場情緒影響顯著。</li>
-            </ul>
-
-            <h3>基金經理人今日操作策略與避險建議 (Actionable Advice)：</h3>
-            <div class="advice-item">
-                <i class="fas fa-microchip"></i>
-                <div>
-                    <strong>1. AI與雲計算基建股：</strong> 考慮聯準會對降息的謹慎態度，以及科技巨頭在AI領域的持續投入，建議關注在雲計算基礎設施、AI算力以及相關硬體供應鏈中有實質進展的公司。這些公司在宏觀環境不明朗時，仍能憑藉其技術創新和市場需求獲得成長。<strong>操作：</strong> 可分批佈局相關行業龍頭，並設定止損點，控制潛在回調風險。
-                </div>
-            </div>
-            <div class="advice-item">
-                <i class="fas fa-shield-alt"></i>
-                <div>
-                    <strong>2. 防禦性資產配置與價值股：</strong> 鑒於地緣政治風險和能源價格的不確定性，部分防禦性資產仍具吸引力。建議適當配置黃金、優質公用事業股或必需消費品板塊，以對沖市場波動風險。同時，關注估值合理、現金流穩定的價值型企業。<strong>操作：</strong> 將5-10%的資產配置於黃金ETF或具有穩定派息的防禦型股票。
-                </div>
-            </div>
-            <div class="advice-item">
-                <i class="fas fa-city"></i>
-                <div>
-                    <strong>3. 港股地產與基建：</strong> 受惠於香港《北部都會區發展策略》的推進，相關本地地產開發商和基建股有望迎來政策紅利。隨著中國內地經濟逐步復甦，港股中受惠於內地消費和政策利好的板塊也值得關注。<strong>操作：</strong> 對於風險承受能力較高的投資者，可選擇性關注具備優質土地儲備或承接大型基建項目能力的港股公司，進行中短期波段操作。
-                </div>
-            </div>
-            <div class="advice-item">
-                <i class="fas fa-money-bill-wave"></i>
-                <div>
-                    <strong>4. 匯率風險管理：</strong> 聯準會理事的鷹派言論可能導致美元短期走強，進而對其他主要貨幣形成壓力。對於持有大量非美元資產的投資者，應考慮進行匯率避險，如通過貨幣期貨或遠期合約鎖定成本。<strong>操作：</strong> 檢視資產負債表的貨幣錯配情況，利用衍生品工具進行適度套期保值，尤其是在美元強勢預期下。
-                </div>
-            </div>
-            <div class="advice-item">
-                <i class="fas fa-chart-pie"></i>
-                <div>
-                    <strong>5. 財報季策略：</strong> 密切關注未來兩週內公佈業績的科技巨頭（如Microsoft, Alphabet）的財報細節和指引。市場已消化部分預期，實際表現與預期偏差可能引發大幅波動。對於個別公司，需深入分析其業務分部數據及未來展望，而非僅看總體營收和盈利。<strong>操作：</strong> 對於持倉的相關公司，在財報公佈前可適度減倉或佈局看跌期權以對沖風險；未持倉者，則待財報落地並觀察市場反應後再判斷進場時機。
-                </div>
-            </div>
-        </div>
-
+        <h3>基金經理人今日具體、可執行的操作策略與避險建議 (Actionable Advice)：</h3>
+        <ol>
+            <li><strong>維持高質量成長股配置，但保持警惕：</strong> 科技巨頭在AI領域的領先地位仍具吸引力，可持續關注如Microsoft, Alphabet等AI相關業務強勁的公司。然而，鑑於反壟斷調查的潛在風險，建議對單一科技股的持倉比例進行審慎評估，並考慮通過ETF等方式分散風險。</li>
+            <li><strong>逢低佈局中國經濟復甦概念股：</strong> 中國工業利潤數據好轉，結合政策刺激預期，港股中與中國內需和高端製造相關的板塊（如部分消費品、新能源、科技硬體）有望受益。建議關注估值合理且基本面穩健的龍頭企業，但需警惕地緣政治和房地產市場的潛在波動。</li>
+            <li><strong>關注防禦性資產與價值股的配置機會：</strong> 在高利率環境可能持續的背景下，公用事業、必需消費品以及股息穩定、現金流充裕的價值型股票可以作為組合的穩定器。此外，黃金作為避險資產，可考慮適度配置以對沖潛在的市場不確定性。</li>
+            <li><strong>積極運用期權進行避險：</strong> 針對科技股的反壟斷風險或整體市場波動性上升，可考慮買入適當的看跌期權（Put Options）作為短期對沖工具，鎖定部分利潤或降低下行風險。對於長期看好的標的，也可考慮賣出遠期看跌期權以賺取權利金。</li>
+            <li><strong>密切追蹤央行官員言論：</strong> 聯準會理事沃勒的演講及下週聯準會會議前的任何風吹草動都可能影響市場對利率路徑的預期。建議隨時調整對利率敏感型資產（如高成長股和長期債券）的曝險。</li>
+            <li><strong>保持流動性，審慎擴張：</strong> 在當前複雜多變的市場環境下，保持充足的現金儲備至關重要，以便在市場出現更大波動或提供更具吸引力的買入機會時，能夠迅速抓住。避免過度槓桿化，控制風險敞口。</li>
+        </ol>
+        <p class="note">免責聲明：本報告所載資料僅供參考用途，不應被視為投資建議或誘使作出任何投資決定。投資涉及風險，閣下應自行評估並諮詢專業意見。</p>
     </div>
 </body>
 </html>
