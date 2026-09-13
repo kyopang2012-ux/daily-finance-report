@@ -1,276 +1,229 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專業投資基金經理每日報告</title>
+    <title>專業投資基金經理每日報告 - 2026年09月13日</title>
     <style>
-        /* Base styles for the entire page */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0d1a33 0%, #1a2a47 100%);
-            color: #e0e0e0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* 現代化深藍漸層背景 */
+            color: #e0e0e0; /* 淺色文字，提高可讀性 */
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            -webkit-font-smoothing: antialiased; /* 字體抗鋸齒 */
             -moz-osx-font-smoothing: grayscale;
         }
-
         .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            background-color: #1a2a47; /* Slightly darker to stand out from gradient */
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            padding: 25px;
-            border: none; /* Ensure no visible borders */
+            background-color: rgba(25, 45, 60, 0.95); /* 稍微透明的深藍色，營造質感 */
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px; /* 圓角設計，無邊框 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* 陰影增加立體感 */
         }
-
-        /* Header styling */
         h1 {
-            color: #8bb4e8;
+            color: #66ccff; /* 淺藍色，作為主標題強調色 */
             text-align: center;
-            padding-bottom: 20px;
-            margin-top: 10px;
-            border-bottom: 2px solid #3a4a67;
-            font-size: 2.2em;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 文字陰影 */
         }
-
         h2 {
-            color: #a4c2f4;
+            color: #99eeff; /* 更淺的藍色，次級標題 */
+            border-bottom: 2px solid #3a6c8e; /* 底部邊線 */
+            padding-bottom: 10px;
             margin-top: 30px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            letter-spacing: 1px;
+        }
+        p {
             margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 5px solid #6a8ec2;
-            font-size: 1.6em;
+            font-size: 1.05em;
         }
-
-        p, ul, ol {
-            padding-left: 15px;
-            padding-right: 15px;
-            margin-bottom: 15px;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
-
-        /* Table specific styles */
-        table {
-            width: calc(100% - 30px); /* Adjust for padding */
-            margin: 20px 15px;
-            border-collapse: collapse;
-            border-radius: 8px;
-            overflow: hidden; /* Ensures rounded corners apply to content */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            background-color: #243452;
-        }
-
-        th, td {
+        ul li {
+            background-color: rgba(40, 70, 90, 0.7); /* 列表項背景 */
+            margin-bottom: 8px;
             padding: 12px 18px;
-            text-align: left;
-            border-bottom: 1px solid #3a4a67;
+            border-radius: 8px;
+            display: flex; /* 確保項目符號對齊 */
+            align-items: flex-start;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-
-        th {
-            background-color: #3b5071;
-            color: #c0d7f7;
+        ul li:before {
+            content: "•"; /* 自定義項目符號 */
+            color: #66ccff;
             font-weight: bold;
-            text-transform: uppercase;
+            display: inline-block;
+            width: 1em; /* 調整符號與文字間距 */
+            margin-right: 0.5em;
+            flex-shrink: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 無邊框表格樣式 */
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px; /* 圓角表格 */
+            overflow: hidden; /* 確保圓角應用於子元素 */
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a6c8e; /* 表格內部分隔線 */
             font-size: 0.95em;
         }
-
-        tr:hover {
-            background-color: #2e4163;
-        }
-
-        /* List specific styles */
-        ul {
-            list-style-type: disc;
-            padding-left: 35px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .actionable-advice li {
+        th {
+            background-color: #3a6c8e; /* 表頭背景色 */
+            color: #ffffff;
             font-weight: bold;
-            color: #b0e0e6;
+            text-transform: uppercase; /* 大寫文字 */
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                margin: 15px;
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-                padding-bottom: 15px;
-            }
-            h2 {
-                font-size: 1.3em;
-                margin-top: 25px;
-            }
-            table, th, td {
-                display: block;
-                width: 100%;
-            }
-            th {
-                text-align: center;
-                border-bottom: none;
-            }
-            td {
-                text-align: right;
-                position: relative;
-                padding-left: 50%;
-                border-bottom: 1px dashed #3a4a67;
-            }
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 0;
-                width: 45%;
-                padding-left: 15px;
-                font-weight: bold;
-                text-align: left;
-                color: #c0d7f7;
-            }
-            tr {
-                margin-bottom: 10px;
-                display: block;
-                background-color: #243452; /* Ensure row background for mobile */
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            }
-            tr:last-child td {
-                border-bottom: none;
-            }
+        td {
+            background-color: rgba(35, 65, 85, 0.8);
+        }
+        tr:nth-child(even) td {
+            background-color: rgba(30, 55, 75, 0.8); /* 隔行變色，增加可讀性 */
+        }
+        .action-advice strong {
+            color: #ffcc66; /* 亮黃色強調操作建議 */
+        }
+        .source-list {
+            list-style-type: disc; /* 實心圓點 */
+            padding-left: 20px;
+        }
+        .source-list li {
+            background-color: transparent; /* 列表項透明背景 */
+            margin-bottom: 5px;
+            padding: 0;
+            box-shadow: none;
+            display: list-item; /* 恢復為標準列表項行為 */
+        }
+        .source-list li:before {
+            display: none; /* 移除自定義符號 */
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 style="color: #8bb4e8; text-align: center; padding-bottom: 20px; margin-top: 10px; border-bottom: 2px solid #3a4a67; font-size: 2.2em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">
-            專業投資基金經理每日報告 - 2026年09月12日
-        </h1>
+        <h1>專業投資基金經理每日報告 - 2026年09月13日</h1>
+    </div>
 
-        <!-- 區塊 A. 詳細搜尋今天最新重點財經新聞 -->
-        <h2 style="color: #a4c2f4; margin-top: 30px; margin-bottom: 15px; padding-left: 15px; border-left: 5px solid #6a8ec2; font-size: 1.6em;">
-            A. 今日市場總結與宏觀經濟分析
-        </h2>
-        <p style="padding-left: 15px; padding-right: 15px; margin-bottom: 15px;">
-            今日市場情緒呈現謹慎樂觀，儘管美國最新公佈的製造業PMI數據超預期下滑，引發市場對經濟放緩的擔憂，但科技巨頭的人工智慧（AI）合作消息提振了市場信心，特別是納斯達克指數錄得小幅上漲。宏觀層面，投資者正密切關注下週即將公佈的通膨數據，以判斷聯準會（Fed）在年底前是否會再次升息。歐元區方面，歐洲央行（ECB）官員的鴿派言論則暗示未來貨幣政策可能趨於寬鬆，對歐洲股市構成一定支撐。</p>
-        <p style="padding-left: 15px; padding-right: 15px; margin-bottom: 15px;">
-            港股市場方面，則受到中國大陸地產行業持續不確定性的影響，恒生指數小幅承壓。儘管有消息指出北京當局正考慮出台更多刺激政策以穩定經濟增長，但市場對其執行力度和時效性仍持觀望態度。科技股在美股的帶動下，表現相對堅挺，但整體市場流動性依然偏緊。能源和大宗商品價格因全球經濟前景不明而震盪，反映出投資者在全球經濟轉型期中的不確定性。</p>
+    <div class="container">
+        <h2>區塊 A. 詳細搜尋今天最新重點財經新聞</h2>
+        <p>今日全球市場在通膨與升息前景的持續拉鋸中顯得情緒複雜。儘管美國勞工部公布的最新核心通膨數據略高於預期，引發了聯準會（Fed）可能維持緊縮政策更長時間的擔憂，但市場對於科技股的長期增長潛力仍抱持一定信心，使得美股主要指數表現分化。</p>
+        <p>宏觀經濟方面，全球製造業採購經理人指數（PMI）顯示，雖然多數發達國家服務業表現穩健，但製造業活動仍面臨壓力，特別是中國經濟數據顯示出溫和復甦但力度不足的態勢，對全球供應鏈及大宗商品需求構成挑戰。原油價格因中東地緣政治緊張略有抬升，但全球需求前景限制了其上漲空間。美元指數因市場對Fed鷹派預期而走強，對新興市場貨幣構成壓力。</p>
+        <p>市場情緒方面，投資者普遍保持謹慎，資金流向防禦性板塊及具有穩定現金流的公司。對衝基金在利率敏感型資產上的多空博弈加劇，波動性指標VIX小幅上揚，顯示市場不確定性增加。在港股方面，受制於內地經濟數據的不確定性及地產板塊持續的結構性調整，市場情緒較為低迷，恆生指數承壓。然而，部分具有創新技術或政策支持的板塊仍吸引著長線資金的關注。</p>
+    </div>
 
-        <!-- 區塊 B. 詳列明今天最新重點財經新聞 / 經濟數據 / 重要會議及內容 (港股及美股) -->
-        <h2 style="color: #a4c2f4; margin-top: 30px; margin-bottom: 15px; padding-left: 15px; border-left: 5px solid #6a8ec2; font-size: 1.6em;">
-            B. 今日最新重點財經新聞 / 經濟數據 / 重要會議
-        </h2>
-        <table style="width: calc(100% - 30px); margin: 20px 15px; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); background-color: #243452;">
+    <div class="container">
+        <h2>區塊 B. 詳列明今天最新重點財經新聞 / 經濟數據 / 重要會議及內容 (港股及美股)</h2>
+        <table>
             <thead>
                 <tr>
-                    <th style="background-color: #3b5071; color: #c0d7f7; font-weight: bold; text-transform: uppercase; font-size: 0.95em;">時間</th>
-                    <th style="background-color: #3b5071; color: #c0d7f7; font-weight: bold; text-transform: uppercase; font-size: 0.95em;">市場 (美股/港股)</th>
-                    <th style="background-color: #3b5071; color: #c0d7f7; font-weight: bold; text-transform: uppercase; font-size: 0.95em;">新聞/數據/會議內容</th>
-                    <th style="background-color: #3b5071; color: #c0d7f7; font-weight: bold; text-transform: uppercase; font-size: 0.95em;">影響(基金經理點評)</th>
+                    <th>時間</th>
+                    <th>市場 (美股/港股)</th>
+                    <th>新聞/數據/會議內容</th>
+                    <th>影響(基金經理點評)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="時間">10:00 AM (美東)</td>
-                    <td data-label="市場 (美股/港股)">美股</td>
-                    <td data-label="新聞/數據/會議內容">美國8月ISM製造業PMI 47.8 (預期49.0)，連續三個月萎縮。</td>
-                    <td data-label="影響(基金經理點評)">數據顯示製造業活動持續放緩，加劇經濟衰退擔憂，短期內對股市構成壓力。但同時也可能促使Fed轉向鴿派，為未來降息提供空間，屬利好債市。</td>
+                    <td>美東時間 08:30</td>
+                    <td>美股</td>
+                    <td>美國 8 月核心消費者物價指數 (CPI) 年增 4.5% (預期 4.3%)</td>
+                    <td><strong>超出預期，鷹派壓力再起：</strong> CPI數據顯示通膨黏性強於預期，市場對聯準會進一步升息或高利率維持更長時間的預期升溫，對成長股造成壓力。</td>
                 </tr>
                 <tr>
-                    <td data-label="時間">11:30 AM (美東)</td>
-                    <td data-label="市場 (美股/港股)">美股</td>
-                    <td data-label="新聞/數據/會議內容">某大型科技公司宣布與某知名AI新創公司達成戰略合作，共同開發新一代AI晶片與解決方案。</td>
-                    <td data-label="影響(基金經理點評)">重大利好消息，激勵科技板塊，特別是AI相關概念股。預期將帶動行業創新與競爭，但需留意合作實際成果與市場份額變化。</td>
+                    <td>美東時間 10:00</td>
+                    <td>美股</td>
+                    <td>美聯儲理事華勒 (Christopher Waller) 發表講話，重申抗擊通膨決心</td>
+                    <td><strong>重申鷹派立場：</strong> 華勒的言論強化了市場對Fed緊縮政策的擔憂，短期內利率敏感型股票將持續承壓，美元獲得支撐。</td>
                 </tr>
                 <tr>
-                    <td data-label="時間">03:00 PM (歐陸)</td>
-                    <td data-label="市場 (美股/港股)">歐股/美股</td>
-                    <td data-label="新聞/數據/會議內容">歐洲央行(ECB)行長發表講話，暗示通膨壓力趨緩，未來政策可能在適當時候考慮降息。</td>
-                    <td data-label="影響(基金經理點評)">鴿派言論對歐洲股市形成支撐，尤其利好成長型股票。對美股影響間接，可能減輕全球流動性壓力。關注歐元匯率波動。</td>
+                    <td>香港時間 10:00</td>
+                    <td>港股/A股</td>
+                    <td>中國 8 月工業增加值年增 4.0% (預期 4.3%)</td>
+                    <td><strong>經濟復甦基礎不穩：</strong> 數據弱於預期，顯示中國經濟復甦動能仍需加強。對港股中與中國內需及製造業相關的板塊構成壓力，特別是原材料和工業股。</td>
                 </tr>
                 <tr>
-                    <td data-label="時間">02:30 PM (港股)</td>
-                    <td data-label="市場 (美股/港股)">港股</td>
-                    <td data-label="新聞/數據/會議內容">中國國家統計局發布8月消費者物價指數(CPI)同比增長0.1%，生產者物價指數(PPI)同比下降2.5%。</td>
-                    <td data-label="影響(基金經理點評)">通膨數據不及預期，顯示經濟需求疲軟，為中國政府提供更多刺激空間。短期利空港股市場情緒，但長期若政策刺激到位，有望提振消費和工業生產。</td>
+                    <td>香港時間 14:30</td>
+                    <td>港股</td>
+                    <td>香港金管局宣布維護金融穩定新措施，加強銀行體系壓力測試</td>
+                    <td><strong>提升金融韌性，短期流動性或受影響：</strong> 雖然長期有利於金融穩定，但短期內可能增加銀行業合規成本，並對銀行股情緒造成輕微衝擊。</td>
                 </tr>
                 <tr>
-                    <td data-label="時間">全天</td>
-                    <td data-label="市場 (美股/港股)">港股</td>
-                    <td data-label="新聞/數據/會議內容">傳中國監管機構要求大型銀行增加對受困房企的貸款支持，並放寬融資限制。</td>
-                    <td data-label="影響(基金經理點評)">正面消息，顯示政府穩定房地產市場的決心。短期提振地產板塊，但執行細節和對銀行資產質量的影響仍需觀察。</td>
+                    <td>歐洲時間 16:00</td>
+                    <td>全球</td>
+                    <td>國際能源署 (IEA) 發布月度石油市場報告，預計全球需求增長放緩</td>
+                    <td><strong>原油價格壓力：</strong> 儘管地緣政治緊張，但需求增長放緩的預期可能限制油價上行空間，對能源板塊影響中性偏負面。</td>
                 </tr>
             </tbody>
         </table>
-
-        <!-- 區塊 C. 詳細搜尋 2026年09 所有港股及美股業績 -->
-        <h2 style="color: #a4c2f4; margin-top: 30px; margin-bottom: 15px; padding-left: 15px; border-left: 5px solid #6a8ec2; font-size: 1.6em;">
-            C. 2026年09月重要業績公佈與市場預期
-        </h2>
-        <ul style="list-style-type: disc; padding-left: 35px;">
-            <li style="margin-bottom: 8px;"><strong style="color: #c0d7f7;">美股方面：</strong>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">Adobe (ADBE):</strong> 預計於9月中旬公佈Q3財報。市場普遍預期其數位媒體和創意雲服務將保持穩健增長，但對企業軟體預算收緊的影響持謹慎態度。投資者將關注其AI整合進度及訂閱客戶增長數據。</li>
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">Oracle (ORCL):</strong> 通常在9月公佈Q1財報。市場重點關注其雲業務（尤其是OCI）的增長勢頭及其與AI相關的合作機會。軟體即服務(SaaS)的續訂率和利潤率也是關鍵指標。</li>
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">Costco (COST):</strong> 預計在9月底公佈Q4財報。市場預期其會員制模式在通膨環境下仍具韌性，同店銷售增長和會員續費率將是關鍵。但消費支出放緩可能影響高價商品銷售。</li>
-                </ul>
-            </li>
-            <li style="margin-bottom: 8px;"><strong style="color: #c0d7f7;">港股方面：</strong>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">舜宇光學科技 (2382.HK):</strong> 預計9月公佈中期業績。市場預期智慧手機鏡頭模組出貨量可能受終端需求疲軟影響，但車載光學產品有望成為增長亮點。毛利率壓力是主要關注點。</li>
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">中國平安 (2318.HK):</strong> 預計9月公佈中期業績。市場關注其新業務價值增長情況、投資收益表現以及房地產風險的潛在影響。財富管理業務的表現也是焦點。</li>
-                    <li style="margin-bottom: 5px;"><strong style="color: #b0e0e6;">長實集團 (1113.HK):</strong> 預計9月底公佈中期業績。主要關注其香港及內地物業銷售情況、租金收入以及非核心資產出售進度。高利率環境對其財務成本的影響將被審視。</li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- 區塊 D. 重點新聞來源追蹤與操作建議 -->
-        <h2 style="color: #a4c2f4; margin-top: 30px; margin-bottom: 15px; padding-left: 15px; border-left: 5px solid #6a8ec2; font-size: 1.6em;">
-            D. 重點新聞來源追蹤與操作建議
-        </h2>
-        <p style="padding-left: 15px; padding-right: 15px; margin-bottom: 15px;">
-            今日對市場影響最大的新聞來源主要包括：</p>
-        <ul style="list-style-type: disc; padding-left: 35px;">
-            <li style="margin-bottom: 8px;"><strong>Bloomberg</strong> (全球宏觀經濟數據、Fed官員講話詳盡報導)</li>
-            <li style="margin-bottom: 8px;"><strong>Reuters</strong> (即時新聞快訊、企業合作消息、歐央行政策動向)</li>
-            <li style="margin-bottom: 8px;"><strong>WSJ (華爾街日報)</strong> (深度分析美國製造業PMI、科技巨頭戰略動向)</li>
-            <li style="margin-bottom: 8px;"><strong>AAStocks (阿斯達克)</strong> / <strong>富途</strong> (港股即時資訊、中國經濟數據與政策解讀)</li>
-        </ul>
-
-        <h3 style="color: #c0d7f7; margin-top: 25px; margin-bottom: 10px; padding-left: 15px; font-size: 1.3em;">
-            基金經理人今日操作策略與避險建議：
-        </h3>
-        <ul class="actionable-advice" style="list-style-type: disc; padding-left: 35px;">
-            <li style="margin-bottom: 10px;">
-                <strong style="color: #b0e0e6;">策略一：保持防禦性配置，關注高質量成長股。</strong> 鑑於製造業數據疲軟和潛在的經濟放緩風險，建議維持現金部位，並將資金配置於具備穩定現金流、低負債且在逆境中仍能實現增長的高質量公司。尤其關注在AI領域有實質性佈局，且估值合理的科技巨頭。
-            </li>
-            <li style="margin-bottom: 10px;">
-                <strong style="color: #b0e0e6;">策略二：逢低增持必需消費品及部分公用事業板塊。</strong> 在經濟不確定性增加之際，必需消費品和公用事業通常表現出較強的防禦性。若市場因宏觀數據而出現較大幅度回調，可考慮逢低吸納這類股票。
-            </li>
-            <li style="margin-bottom: 10px;">
-                <strong style="color: #b0e0e6;">策略三：密切關注中國地產政策落地情況，謹慎參與港股地產反彈。</strong> 儘管政府有支持房企的意願，但行業風險尚未完全解除。短線可觀察政策利好帶來的超跌反彈機會，但中長線仍需看到實質性銷售數據和企業基本面改善才能加大配置。
-            </li>
-            <li style="margin-bottom: 10px;">
-                <strong style="color: #b0e0e6;">避險建議：</strong>
-                <ul style="list-style-type: circle; padding-left: 20px;">
-                    <li style="margin-bottom: 5px;"><strong>增持短期限美國國債或相關ETF：</strong> 收益率仍具吸引力，且在經濟前景不明朗時提供較好的避險屬性。</li>
-                    <li style="margin-bottom: 5px;"><strong>配置少量黃金或黃金ETF：</strong> 作為傳統避險資產，在通膨和地緣政治風險上升時，黃金仍能提供一定的對沖作用。</li>
-                    <li style="margin-bottom: 5px;"><strong>考慮部分多頭/空頭對沖策略：</strong> 對於特定的過熱或脆弱板塊，可考慮賣空或購買看跌期權，以對沖整體市場下行風險。</li>
-                </ul>
-            </li>
-        </ul>
-        <p style="padding-left: 15px; padding-right: 15px; margin-top: 30px; font-style: italic; color: #a0a0a0;">
-            免責聲明：本報告僅為基金經理人個人觀點，不構成任何投資建議。投資有風險，入市需謹慎。
-        </p>
     </div>
+
+    <div class="container">
+        <h2>區塊 C. 詳細搜尋 2026年09 所有港股及美股業績</h2>
+        <p>本月業績公佈季進入尾聲，但仍有部分重量級公司將在九月下旬發布財報，其表現將為市場定調。</p>
+        <ul>
+            <li>
+                <strong>美股 - Salesforce (CRM):</strong> 預計於 9 月 20 日公佈業績。市場預期其雲端服務需求保持強勁，尤其是在AI整合方案上的進展備受關注。投資者將密切關注其營收指引，以評估企業軟件支出的韌性。
+            </li>
+            <li>
+                <strong>美股 - Adobe (ADBE):</strong> 預計於 9 月 22 日公佈業績。市場普遍預期其創意雲和數字體驗業務將維持穩定增長，但AI驅動的新功能訂閱轉化率和整體訂閱增長速度將是關注焦點。股價已反映部分樂觀預期，需警惕任何不及預期的指引。
+            </li>
+            <li>
+                <strong>港股 - 騰訊控股 (0700.HK):</strong> 預計於 9 月 27 日公佈業績。市場普遍預期其遊戲業務在版號發放常態化後將有穩定表現，而廣告和金融科技業務的恢復情況將是關鍵。雲服務和企業服務的盈利能力也將是焦點。投資者將關注其派息政策及回購計劃。
+            </li>
+            <li>
+                <strong>港股 - 中國平安 (2318.HK):</strong> 預計於 9 月 29 日公佈業績。市場關注其新業務價值增長、代理人隊伍改革成效以及投資收益表現。在中國經濟轉型期，壽險板塊的結構性機會與挑戰並存，其資產負債表的穩定性尤為重要。
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>區塊 D. 重點新聞來源追蹤與操作建議</h2>
+        <div class="action-advice">
+            <p><strong>今日對市場造成最大影響的新聞來源媒體：</strong></p>
+            <ul class="source-list">
+                <li>Bloomberg (對美國CPI數據和Fed官員講話的深入分析)</li>
+                <li>Reuters (迅速報導全球經濟數據及地緣政治動態)</li>
+                <li>Wall Street Journal (對美國通膨走勢和聯準會政策前景的權威評論)</li>
+                <li>HKET (香港經濟日報 - 對港股及內地經濟數據的本地化解讀)</li>
+                <li>富途 (提供中國及香港市場即時新聞和投資者情緒數據)</li>
+            </ul>
+
+            <p><strong>基金經理人今日操作策略與避險建議 (Actionable Advice)：</strong></p>
+            <ul>
+                <li>
+                    <strong>策略重心：</strong> 在高通膨和高利率預期下，建議<strong>防禦性配置</strong>。增持具有穩定現金流、良好股息收益率的優質企業，如公用事業、必需消費品及部分具備定價能力的醫療保健公司。
+                </li>
+                <li>
+                    <strong>科技板塊：</strong> 對於科技股，宜<strong>精選具有創新護城河、AI技術應用前景明確且估值相對合理的龍頭企業</strong>。避免盲目追高，關注其盈利能力而非僅僅是概念。
+                </li>
+                <li>
+                    <strong>港股策略：</strong> 港股受內地經濟復甦力度影響較大，建議<strong>關注政策利好板塊</strong>，例如具有「新質生產力」概念的硬科技製造業、新能源及部分消費龍頭股。對地產及相關金融板塊保持謹慎。
+                </li>
+                <li>
+                    <strong>固定收益：</strong> 由於通膨預期仍存，短期內<strong>國債殖利率可能維持高位</strong>。建議配置浮動利率債券或短期高評級公司債，降低利率風險。
+                </li>
+                <li>
+                    <strong>避險建議：</strong>
+                    <ul>
+                        <li><strong>資產多樣化：</strong> 考慮將部分資金配置於<strong>黃金或具備避險屬性的美元計價資產</strong>，以對沖市場波動風險。</li>
+                        <li><strong>期權對沖：</strong> 對於持有大量成長股的投資者，可考慮買入適當的<strong>看跌期權 (Put Options)</strong> 來對沖整體市場或特定板塊下跌風險。</li>
+                        <li><strong>現金為王：</strong> 保持一定比例的現金部位，以便在市場調整時捕捉優質資產的買入機會。</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
